@@ -5,12 +5,6 @@ Write your code for the 'Word Count' exercise in this file. Make the tests in
 To get started with TDD, see the `README.md` file in your
 `ruby/word-count` directory.
 =end
-# count occurences of each word
-# send all letters to lowercase
-# words can be all letters or all numbers
-# words can have 1 apostrophe at most
-# words are separated by any sort of whitespace (ellipses?)
-#
 
 class Phrase
   @@word_count
@@ -58,7 +52,7 @@ class Phrase
 
       # in the case of numeric character, make sure the word so far is numeric too
       /[[:digit:]]/.match(c) do |m|
-        current_word += m[0] unless is_letter #b1a45cdf hello
+        current_word += m[0] unless is_letter
         is_numeric = true
       end
 
