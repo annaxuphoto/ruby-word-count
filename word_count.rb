@@ -79,7 +79,7 @@ class Phrase
     # remove a trailing single quote as those aren't valid apostrophes
     current_word = current_word[0...current_word.length - 1] if current_word[current_word.length - 1] == '\''
 
-    if word_count[current_word]
+    if word_count.key?(current_word)
       word_count[current_word] += 1
     else
       word_count[current_word] = 1
