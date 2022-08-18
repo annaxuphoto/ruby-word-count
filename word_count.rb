@@ -7,22 +7,22 @@ To get started with TDD, see the `README.md` file in your
 =end
 
 class Phrase
-  @@word_count
-  @@value
+  @word_count
+  @value
   WORD_SEPARATORS = [/[[:space:]]/, /,/, /\.{2,}/].freeze
 
   def initialize(value)
-    @@value = value
-    @@word_count = get_word_count(value)
+    @value = value
+    @word_count = get_word_count(value)
   end
 
   def word_count
-    @@word_count
+    @word_count
   end
 
   def set_value(new_value)
-    @@value = new_value
-    @@word_count = get_word_count(new_value)
+    @value = new_value
+    @word_count = get_word_count(new_value)
   end
 
   def get_word_count(value)
